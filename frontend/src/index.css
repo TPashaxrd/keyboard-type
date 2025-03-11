@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 
+! font-family: Space Grotesk, serif;
+! font-family: Roboto Condensed, serif;
+! font-family: Atkinson Hyperlegible Next serif;
+! font-family: 'Montserrat', serif;
+! font-family: 'Inter', sans-serif;
+*/
+
+body{
+    font-family: 'Inter', serif;
+    background-color: #1F2937;
+}
+input {
+    font-family: 'Montserrat', serif;
+}
+::selection {
+    background-color: blue;
+    color: white;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.words {
+    -webkit-user-select: none;
+    user-select: none;
+}
+.functions {
+    font-family: 'Atkinson Hyperlegible Next', serif;
+}
