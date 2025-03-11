@@ -18,7 +18,7 @@ const App: React.FC = () => {
     if (startTime && !endTime) {
       const timer = setTimeout(() => {
         finishTest();
-      }, 5000);
+      }, 60000);
 
       return () => {
         clearTimeout(timer);
