@@ -110,12 +110,12 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-8 text-blue-400">Klavye Hız Testi</h1>
-      <div className="words text-2xl text-center border-4 border-blue-500 p-6 shadow-lg rounded-lg mb-4 max-w-4xl bg-gray-800">
+      <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-blue-400">Klavye Hız Testi</h1>
+      <div className="words text-lg md:text-2xl text-center border-2 md:border-4 border-blue-500 p-4 md:p-6 shadow-lg rounded-lg mb-4 w-full max-w-2xl bg-gray-800">
         {words.map((word, index) => (
           <span key={index} className={`mx-1 ${getWordStyle(index)}`}>
-            <span className="word text-base md:text-xl lg:text-2xl">
-              {word}
+            <span className="word text-sm md:text-base lg:text-xl">
+              {word.toLowerCase()}
             </span>
           </span>
         ))}
@@ -125,32 +125,32 @@ const App: React.FC = () => {
           type="text"
           value={currentInput}
           onChange={handleChange}
-          className="w-full max-w-2xl p-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+          className="w-full max-w-2xl p-2 md:p-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
           placeholder="Buraya yazmaya başla..."
         />
       ) : (
         <>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-2 md:gap-4 mt-4 md:mt-6">
             <button
               onClick={copyToClipboard}
-              className="functions flex items-center gap-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              className="functions flex items-center gap-1 md:gap-2 p-1 md:p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
-            <FaCopy size={24} color="white" />
-            <span>Kopyala</span>
+              <FaCopy size={20} color="white" />
+              <span className="text-sm md:text-base">Kopyala</span>
             </button>
             <button
               onClick={shareResult}
-              className="functions flex items-center gap-2 p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+              className="functions flex items-center gap-1 md:gap-2 p-1 md:p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
             >
-              <FaShare size={24} color="white" />
-              <span>Paylaş</span>
+              <FaShare size={20} color="white" />
+              <span className="text-sm md:text-base">Paylaş</span>
             </button>
           </div>
-          <div className="text-xl mt-6 p-6 bg-gray-800 rounded-lg text-center w-full max-w-2xl">
-            <p className="text-green-400 mb-2">✅ Doğru Kelime: {correctCount}</p>
-            <p className="text-red-400 mb-2">❌ Yanlış Kelime: {wrongCount}</p>
-            <p className="text-blue-400 mb-2">📊 Toplam Kelime: {correctCount + wrongCount}</p>
-            <p className="text-yellow-400 mb-2">⚡ Hız: {wpm} WPM</p>
+          <div className="text-base md:text-xl mt-4 md:mt-6 p-4 md:p-6 bg-gray-800 rounded-lg text-center w-full max-w-2xl">
+            <p className="text-green-400 mb-1 md:mb-2">✅ Doğru Kelime: {correctCount}</p>
+            <p className="text-red-400 mb-1 md:mb-2">❌ Yanlış Kelime: {wrongCount}</p>
+            <p className="text-blue-400 mb-1 md:mb-2">📊 Toplam Kelime: {correctCount + wrongCount}</p>
+            <p className="text-yellow-400 mb-1 md:mb-2">⚡ Hız: {wpm} WPM</p>
             <p className="text-purple-400">{getTotalTime()}</p>
           </div>
         </>
